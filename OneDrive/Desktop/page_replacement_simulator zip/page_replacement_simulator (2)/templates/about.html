@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - Page Replacement Simulator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-4xl font-bold mb-6 text-center text-blue-400">About Us</h1>
+        <p class="mb-4">Efficient page replacement algorithms are crucial for managing memory in operating systems. They determine which pages to swap out when new pages need to be loaded into memory.</p>
+        
+        <h2 class="text-2xl font-semibold mb-4">FIFO (First-In-First-Out)</h2>
+        <p>This algorithm replaces the oldest page in memory. It maintains a queue of pages, and when a page needs to be replaced, the page that has been in memory the longest is removed.</p>
+        <p><strong>Example:</strong> If pages 1, 2, and 3 are in memory and page 1 is the oldest, when page 4 is requested, page 1 is replaced.</p>
+        <table class="mb-4">
+            <thead>
+                <tr>
+                    <th>Page Request</th>
+                    <th>Memory State</th>
+                    <th>Page Replaced</th>
+                    <th>Page Faults</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>[1]</td>
+                    <td>-</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>[1, 2]</td>
+                    <td>-</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>[1, 2, 3]</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>[2, 3, 4]</td>
+                    <td>1</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 class="text-2xl font-semibold mb-4">LRU (Least Recently Used)</h2>
+        <p>This algorithm replaces the page that has not been used for the longest period of time. It keeps track of page usage over time and removes the least recently accessed page.</p>
+        <p><strong>Example:</strong> If pages 1, 2, and 3 are in memory and page 2 is the least recently used, when page 4 is requested, page 2 is replaced.</p>
+        <table class="mb-4">
+            <thead>
+                <tr>
+                    <th>Page Request</th>
+                    <th>Memory State</th>
+                    <th>Page Replaced</th>
+                    <th>Page Faults</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>[1]</td>
+                    <td>-</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>[1, 2]</td>
+                    <td>-</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>[1, 2, 3]</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>[1, 3, 4]</td>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 class="text-2xl font-semibold mb-4">Optimal</h2>
+        <p>This algorithm replaces the page that will not be used for the longest period in the future. While it provides the best performance, it is not practical for implementation since it requires future knowledge of page requests.</p>
+        <p><strong>Example:</strong> If pages 1, 2, and 3 are in memory and the next requests are for pages 1, 4, and 2, the optimal choice would be to replace page 3 since it will not be used again.</p>
+        <table class="mb-4">
+            <thead>
+                <tr>
+                    <th>Page Request</th>
+                    <th>Memory State</th>
+                    <th>Page Replaced</th>
+                    <th>Page Faults</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>[1]</td>
+                    <td>-</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>[1, 2]</td>
+                    <td>-</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>[1, 2, 3]</td>
+                    <td>-</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>[1, 2, 4]</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

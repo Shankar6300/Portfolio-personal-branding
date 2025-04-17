@@ -1,0 +1,64 @@
+body {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230706/pngtree-d-rendering-of-secure-data-network-technology-with-interconnected-code-algorithms-image_3809206.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1, h2, label, li {
+    color: #f0f0f0;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f0f0f0;
+    backdrop-filter: blur(5px);
+}
+
+input:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 10px #00bcd4;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 188, 212, 0.4);
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 600px;
+    margin: 4rem auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.7);
+}
