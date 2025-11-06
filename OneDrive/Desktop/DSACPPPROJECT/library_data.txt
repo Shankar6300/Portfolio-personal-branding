@@ -1,0 +1,11 @@
+108,Algorithm Design Manual,Steven S. Skiena,0
+103,Artificial Intelligence: A Modern Approach,Stuart Russell,0
+109,Competitive Programming 4,Steven Halim,0
+102,Computer Networks,Andrew S. Tanenbaum,0
+104,Database System Concepts,Henry F. Korth,0
+107,Design Patterns: Elements of Reusable Object-Oriented Software,Erich Gamma,0
+106,Introduction to Machine Learning with Python,Andreas MÅller,0
+105,Operating System Concepts,Abraham Silberschatz,0
+110,Steven Halim,David Griffiths,0
+111,The Art of Computer Programming,Donald E. Knuth,0
+101,The Pragmatic Programmer,Andrew Hunt & David Thomas,0
