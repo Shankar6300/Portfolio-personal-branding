@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goddeti Shankar Narayana Reddy - Full Stack Developer</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- ADVANCED UI ELEMENTS -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <!-- #HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#">
+        <h1 class="logo"><span class="logo-accent">DV</span> Portfolio</h1>
+      </a>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      </button>
+
+      <button class="theme-toggle" aria-label="Toggle Theme" data-theme-btn>
+        <ion-icon name="moon-outline" class="theme-icon dark-icon" style="display: none;"></ion-icon>
+        <ion-icon name="sunny-outline" class="theme-icon light-icon"></ion-icon>
+      </button>
+
+      <nav class="navbar container">
+        <ul class="navbar-list">
+          <li><a href="#home"           class="navbar-link active" data-nav-link>Home</a></li>
+          <li><a href="#about"          class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="#experience"     class="navbar-link" data-nav-link>Experience</a></li>
+          <li><a href="#skills"         class="navbar-link" data-nav-link>Skills</a></li>
+          <li><a href="#projects"       class="navbar-link" data-nav-link>Projects</a></li>
+          <li><a href="#certifications" class="navbar-link" data-nav-link>Certs</a></li>
+          <li><a href="#achievements"   class="navbar-link" data-nav-link>Achievements</a></li>
+          <li><a href="#resume"         class="navbar-link" data-nav-link>Resume</a></li>
+          <li><a href="#contact"        class="navbar-link" data-nav-link>Contact</a></li>
+          <li><a href="./Goddeti_Shankar_Resume.pdf" download class="btn btn-primary">Download CV</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- #HERO -->
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-content">
+            <h2 class="hero-title">
+              <span>Hi, I'm</span>
+              <strong class="hero-name">Goddeti Shankar<br>Narayana Reddy</strong>
+            </h2>
+
+            <p class="hero-role typing-line">Cloud Computing Enthusiast | Systems &amp; AI Project Builder</p>
+
+            <p class="hero-text">
+              Computer Science student passionate about cloud technologies, system design, and AI-driven applications. I enjoy building scalable systems, automation tools, and intelligent web applications.
+            </p>
+
+            <div class="hero-social">
+              <a href="https://www.linkedin.com/in/shankar04/" target="_blank" class="social-link" aria-label="LinkedIn">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+              <a href="https://github.com/Shankar6300" target="_blank" class="social-link" aria-label="GitHub">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <a href="mailto:shankarnarayanareddy196@gmail.com" class="social-link" aria-label="Email">
+                <ion-icon name="mail-outline"></ion-icon>
+              </a>
+            </div>
+
+            <div class="btn-group hero-btn-group">
+              <a href="#contact" class="btn btn-primary blue">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="hero-banner">
+            <div class="hero-avatar-wrapper">
+              <img src="assets/images/avatar.jpg" width="300" height="300"
+                alt="Goddeti Shankar Narayana Reddy" class="hero-avatar">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- #ABOUT -->
+      <section class="section about" id="about">
+        <div class="container">
+
+          <div class="about-left">
+            <div class="about-card">
+              <h3 class="about-card-title">
+                <ion-icon name="person-circle-outline"></ion-icon> Quick Facts
+              </h3>
+              <ul class="facts-list">
+                <li class="facts-item">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <div>
+                    <span class="facts-label">Location</span>
+                    <span class="facts-value">Punjab, India</span>
+                  </div>
+                </li>
+                <li class="facts-item">
+                  <ion-icon name="school-outline"></ion-icon>
+                  <div>
+                    <span class="facts-label">Education</span>
+                    <span class="facts-value">B.Tech CSE at LPU</span>
+                  </div>
+                </li>
+                <li class="facts-item">
+                  <ion-icon name="terminal-outline"></ion-icon>
+                  <div>
+                    <span class="facts-label">Focus Area</span>
+                    <span class="facts-value">Cloud & AI</span>
+                  </div>
+                </li>
+                <li class="facts-item">
+                  <ion-icon name="code-slash-outline"></ion-icon>
+                  <div>
+                    <span class="facts-label">CGPA</span>
+                    <span class="facts-value">8.27</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="about-card">
+              <h3 class="about-card-title">
+                <ion-icon name="game-controller-outline"></ion-icon> When I'm Not Coding
+              </h3>
+              <ul class="hobbies-list">
+                <li class="hobbies-item">
+                  <ion-icon name="airplane-outline"></ion-icon>
+                  <span>Travelling</span>
+                </li>
+                <li class="hobbies-item">
+                  <ion-icon name="film-outline"></ion-icon>
+                  <span>Movies</span>
+                </li>
+                <li class="hobbies-item">
+                  <ion-icon name="musical-notes-outline"></ion-icon>
+                  <span>Music</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <p class="section-subtitle" style="text-align:left;">About Me</p>
+            <h2 class="h2 section-title" style="text-align:left;">My Journey</h2>
+
+            <p class="section-text about-text">
+              Hello! I'm <span class="highlight-name">Goddeti Shankar Narayana Reddy</span>, a Computer Science and Engineering student at Lovely Professional University with a strong interest in cloud computing, system architecture, and artificial intelligence.
+            </p>
+
+            <p class="section-text about-text">
+              I enjoy building automation tools, serverless applications, and data-structure-driven systems. My projects focus on solving practical problems using efficient algorithms and scalable cloud solutions.
+            </p>
+
+            <div class="approach-card">
+              <h3 class="approach-title">My Approach</h3>
+              <p class="approach-text">
+                I believe in creating technology that's not just functional but meaningful. Every line of code I write
+                aims to solve real problems and enhance user experiences. I value clean architecture, collaborative
+                development, and continuous learning as the foundations of great software.
+              </p>
+            </div>
+
+            <a href="#projects" class="btn btn-primary blue">View Portfolio</a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- #EXPERIENCE -->
+      <section class="section experience" id="experience">
+        <div class="container">
+
+          <p class="section-subtitle">Professional Journey</p>
+          <h2 class="h2 section-title">My Experience</h2>
+          <p class="section-text">A timeline of my professional growth and technical contributions</p>
+
+          <div class="experience-timeline">
+
+            <div class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <h3 class="experience-job-title">Data Structures &amp; Algorithms Training</h3>
+                  <p class="experience-company">Cipher Schools • Online</p>
+                </div>
+                <span class="experience-date">Jun 2025 - Jul 2025</span>
+              </div>
+              <ul class="experience-description" style="list-style: disc; padding-inline-start: 18px; margin-block-end: 16px; display: flex; flex-direction: column; gap: 6px;">
+                <li>Covered essential concepts including arrays, linked lists, stacks, queues, trees, graphs, and dynamic programming.</li>
+                <li>Tackled 100+ coding challenges, strengthening analytical reasoning and logical problem-solving.</li>
+                <li>Examined time/space complexity and applied efficient algorithmic strategies.</li>
+                <li>Completed a C++ console-based Library Management System as the capstone project.</li>
+              </ul>
+              <div class="experience-skills">
+                <span class="exp-skill-tag">C++</span>
+                <span class="exp-skill-tag">Data Structures</span>
+                <span class="exp-skill-tag">Problem Solving</span>
+                <span class="exp-skill-tag">Algorithm Design</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- #SKILLS -->
+      <section class="section skills" id="skills">
+        <div class="container">
+
+          <p class="section-subtitle">Technical Arsenal</p>
+          <h2 class="h2 section-title">My Skills &amp; Expertise</h2>
+          <p class="section-text">A showcase of technologies I've mastered on my journey as a developer.</p>
+
+          <div class="skills-tabs">
+            <button class="skills-tab-btn active" data-filter="all">All Skills</button>
+            <button class="skills-tab-btn" data-filter="languages">Languages</button>
+            <button class="skills-tab-btn" data-filter="web">Web Tech</button>
+            <button class="skills-tab-btn" data-filter="devops">DevOps &amp; Tools</button>
+            <button class="skills-tab-btn" data-filter="cloud">Cloud</button>
+          </div>
+
+          <ul class="skills-list">
+            <li class="skills-item" data-category="languages">
+              <div class="wrapper" style="width:85%"><h3 class="skills-title">C++</h3><data class="skills-data" value="85">85%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:85%"></div></div>
+            </li>
+            <li class="skills-item" data-category="languages">
+              <div class="wrapper" style="width:85%"><h3 class="skills-title">C</h3><data class="skills-data" value="85">85%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:85%"></div></div>
+            </li>
+            <li class="skills-item" data-category="languages">
+              <div class="wrapper" style="width:80%"><h3 class="skills-title">Python</h3><data class="skills-data" value="80">80%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:80%"></div></div>
+            </li>
+            <li class="skills-item" data-category="languages">
+              <div class="wrapper" style="width:75%"><h3 class="skills-title">Java</h3><data class="skills-data" value="75">75%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:75%"></div></div>
+            </li>
+            <li class="skills-item" data-category="web">
+              <div class="wrapper" style="width:90%"><h3 class="skills-title">HTML &amp; CSS</h3><data class="skills-data" value="90">90%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:90%"></div></div>
+            </li>
+            <li class="skills-item" data-category="web">
+              <div class="wrapper" style="width:80%"><h3 class="skills-title">JavaScript</h3><data class="skills-data" value="80">80%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:80%"></div></div>
+            </li>
+            <li class="skills-item" data-category="devops">
+              <div class="wrapper" style="width:85%"><h3 class="skills-title">Git &amp; GitHub</h3><data class="skills-data" value="85">85%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:85%"></div></div>
+            </li>
+            <li class="skills-item" data-category="devops">
+              <div class="wrapper" style="width:70%"><h3 class="skills-title">Docker</h3><data class="skills-data" value="70">70%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:70%"></div></div>
+            </li>
+            <li class="skills-item" data-category="devops">
+              <div class="wrapper" style="width:75%"><h3 class="skills-title">Linux / Ubuntu</h3><data class="skills-data" value="75">75%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:75%"></div></div>
+            </li>
+            <li class="skills-item" data-category="cloud">
+              <div class="wrapper" style="width:75%"><h3 class="skills-title">AWS (Lambda, S3, IAM)</h3><data class="skills-data" value="75">75%</data></div>
+              <div class="skills-progress-box"><div class="skills-progress" style="width:75%"></div></div>
+            </li>
+          </ul>
+
+          <div class="soft-skills">
+            <h3 class="soft-skills-title">Soft Skills</h3>
+            <div class="soft-skill-tags">
+              <span class="soft-tag">Problem-Solving</span>
+              <span class="soft-tag">Analytical Thinking</span>
+              <span class="soft-tag">Teamwork</span>
+              <span class="soft-tag">Quick Learning</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- #PROJECTS -->
+      <section class="section" id="projects">
+        <div class="container">
+
+          <p class="section-subtitle">My Work</p>
+          <h2 class="h2 section-title">Featured Projects</h2>
+          <p class="section-text">A showcase of my work spanning web applications, APIs, and cloud solutions.</p>
+
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="cpp">C++ / DSA</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="cloud">Cloud</button>
+          </div>
+
+          <div class="project-grid">
+
+            <div class="project-card" data-category="cpp">
+              <div class="project-img-wrapper">
+                <img src="assets/images/project-library.png" alt="Digital Library Management System" class="project-img">
+                <div class="project-overlay">
+                  <a href="https://github.com/Shankar6300/Library-Management-System" target="_blank" class="project-link-btn">
+                    <ion-icon name="logo-github"></ion-icon> GitHub Repo
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-date">Jun 2025 – Jul 2025</span>
+                <h3 class="project-title">Digital Library Management System</h3>
+                <p class="project-desc">Engineered a console-based system to organize books, maintain user data, and enable fast retrieval. Used vector for dynamic data storage, stack to maintain recently issued books, and applied linear search and STL sort for optimized operations. Elevated academic resource handling by enabling structured access and simplified navigation.</p>
+                <div class="project-tags">
+                  <span class="project-tag">C++</span>
+                  <span class="project-tag">Data Structures</span>
+                  <span class="project-tag">Console App</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="web">
+              <div class="project-img-wrapper">
+                <img src="assets/images/project-ai-language.png" alt="AI Language Survival Guide" class="project-img">
+                <div class="project-overlay">
+                  <a href="https://github.com/Shankar6300/AI-Language-Survival-Guide-" target="_blank" class="project-link-btn">
+                    <ion-icon name="logo-github"></ion-icon> GitHub Repo
+                  </a>
+                  <a href="https://ai-language-survival.vercel.app/" target="_blank" class="project-link-btn" style="background: linear-gradient(135deg, hsl(180, 95%, 65%), hsl(220, 90%, 65%));">
+                    <ion-icon name="globe-outline"></ion-icon> Live Demo
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-date">Mar 2025 – Apr 2025</span>
+                <h3 class="project-title">AI Language Survival Guide</h3>
+                <p class="project-desc">Produced a web application assisting travellers with real-time translation and cultural guidance. Crafted an adaptive interface featuring phrase suggestions, instant responses, and interactive modules. Enhanced user experience through seamless front-end behaviour supported by Python-powered logic.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="cloud">
+              <div class="project-img-wrapper">
+                <img src="assets/images/project-aws-s3.png" alt="AWS S3 File Conversion System" class="project-img">
+                <div class="project-overlay">
+                  <a href="https://github.com/Shankar6300/aws-s3-file-conversion-system" target="_blank" class="project-link-btn">
+                    <ion-icon name="logo-github"></ion-icon> GitHub Repo
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-date">Feb 2025 – Mar 2025</span>
+                <h3 class="project-title">AWS S3 File Conversion System</h3>
+                <p class="project-desc">Architected a serverless workflow that transforms CSV files into JSON through AWS event triggers. Configured S3-based automation with secure IAM permissions for controlled and reliable execution. Streamlined cloud data processing by reducing manual intervention and ensuring on-demand conversions.</p>
+                <div class="project-tags">
+                  <span class="project-tag">AWS Lambda</span>
+                  <span class="project-tag">Amazon S3</span>
+                  <span class="project-tag">IAM</span>
+                  <span class="project-tag">Python</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- #CERTIFICATIONS -->
+      <section class="section" id="certifications">
+        <div class="container">
+
+          <p class="section-subtitle">Credentials</p>
+          <h2 class="h2 section-title">Certifications</h2>
+          <p class="section-text">Professional credentials validating my technical expertise and continuous learning.</p>
+
+          <div class="cert-grid">
+
+            <a href="https://drive.google.com/file/d/1iMkpvL2gnDfElYKTY-_8Z5BDn3ClQyfD/view?usp=sharing" target="_blank" class="cert-card-link">
+              <div class="cert-card">
+                <div class="cert-icon-wrap">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+                <div class="cert-info">
+                  <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">Oracle</span>
+                    <span class="cert-date">Mar 2026</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1nGr2r4Bd8u6WWjMFJcJC-SX4QuExhKRs/view?usp=sharing" target="_blank" class="cert-card-link">
+              <div class="cert-card">
+                <div class="cert-icon-wrap">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+                <div class="cert-info">
+                  <h3 class="cert-title">Java Programming</h3>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">IAM Neo Platform</span>
+                    <span class="cert-date">May 2025</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/197eCEOrjpNe1sB7OrYnH5dBaVODFm8lW/view?usp=sharing" target="_blank" class="cert-card-link">
+              <div class="cert-card">
+                <div class="cert-icon-wrap">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+                <div class="cert-info">
+                  <h3 class="cert-title">Privacy And Security In Online Social Media</h3>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">NPTEL</span>
+                    <span class="cert-date">Apr 2025</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1nzlX2bCH_T89yyQz6LezMW-zfwAZwLWt/view?usp=sharing" target="_blank" class="cert-card-link">
+              <div class="cert-card">
+                <div class="cert-icon-wrap">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+                <div class="cert-info">
+                  <h3 class="cert-title">Object-Oriented Programming (OOP)</h3>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">IAM Neo Platform</span>
+                    <span class="cert-date">Dec 2024</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1IoOeyPx3Pwwdr8TbJnFAq0cgo-Vcs0eM/view?usp=sharing" target="_blank" class="cert-card-link">
+              <div class="cert-card">
+                <div class="cert-icon-wrap">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+                <div class="cert-info">
+                  <h3 class="cert-title">Responsive Web Design</h3>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">Free Code Camp</span>
+                    <span class="cert-date">Nov 2023</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- #ACHIEVEMENTS -->
+      <section class="section" id="achievements">
+        <div class="container">
+
+          <p class="section-subtitle">Excellence</p>
+          <h2 class="h2 section-title">Achievements</h2>
+          <p class="section-text">Milestones reflecting my commitment to excellence and continuous growth in technology.</p>
+
+          <ul class="achievement-list">
+
+            <li class="achievement-item">
+              <div class="achievement-icon">
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <div class="achievement-info">
+                <div class="achievement-header">
+                  <h3 class="achievement-title"><a href="https://www.hackerrank.com/profile/shankarreddy07" target="_blank" style="color:inherit">HackerRank 5&#9733; in C++ Programming</a></h3>
+                  <span class="achievement-date">Feb 2026</span>
+                </div>
+                <p class="achievement-desc">Achieved a 5-star rating on HackerRank by solving advanced programming challenges using C++.</p>
+              </div>
+            </li>
+
+            <li class="achievement-item">
+              <div class="achievement-icon">
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <div class="achievement-info">
+                <div class="achievement-header">
+                  <h3 class="achievement-title"><a href="https://www.hackerrank.com/profile/shankarreddy07" target="_blank" style="color:inherit">HackerRank 5&#9733; in Problem Solving</a></h3>
+                  <span class="achievement-date">Feb 2026</span>
+                </div>
+                <p class="achievement-desc">Earned a 5-star rating by solving algorithmic and data structure challenges on HackerRank.</p>
+              </div>
+            </li>
+
+            <li class="achievement-item">
+              <div class="achievement-icon">
+                <ion-icon name="trophy"></ion-icon>
+              </div>
+              <div class="achievement-info">
+                <div class="achievement-header">
+                  <h3 class="achievement-title"><a href="https://drive.google.com/file/d/1GSZbwCGtlFfraR4EItseFqYetiDezZ-t/view?usp=sharing" target="_blank" style="color:inherit">Adobe India Hackathon</a></h3>
+                  <span class="achievement-date">Jul 2025</span>
+                </div>
+                <p class="achievement-desc">Competed in Adobe India Hackathon Round-1 (MCQ + Coding) representing LPU as part of Team Hack Street Boys.</p>
+              </div>
+            </li>
+
+            <li class="achievement-item">
+              <div class="achievement-icon">
+                <ion-icon name="trophy"></ion-icon>
+              </div>
+              <div class="achievement-info">
+                <div class="achievement-header">
+                  <h3 class="achievement-title"><a href="https://drive.google.com/file/d/1lXwWy8y8TSbmsuq7jrlsEfIEStIstuf6/view?usp=sharing" target="_blank" style="color:inherit">Code Of Duty Hackathon</a></h3>
+                  <span class="achievement-date">Mar 2024</span>
+                </div>
+                <p class="achievement-desc">Participated in the Code of Duty Web Hackathon 2024, demonstrating strong teamwork and innovative problem solving.</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- #RESUME -->
+      <section class="section resume-section" id="resume">
+        <div class="container">
+
+          <p class="section-subtitle">My Resume</p>
+          <h2 class="h2 section-title">Education &amp; Experience</h2>
+
+          <div class="resume-contact-bar">
+            <a href="mailto:shankarnarayanareddy196@gmail.com" class="resume-contact-link">
+              <ion-icon name="mail-outline"></ion-icon> shankarnarayanareddy196@gmail.com
+            </a>
+            <a href="tel:+916300783770" class="resume-contact-link">
+              <ion-icon name="call-outline"></ion-icon> +91-6300783770
+            </a>
+            <a href="https://www.linkedin.com/in/shankar04/" target="_blank" class="resume-contact-link">
+              <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
+            </a>
+            <a href="https://github.com/Shankar6300" target="_blank" class="resume-contact-link">
+              <ion-icon name="logo-github"></ion-icon> GitHub
+            </a>
+          </div>
+
+          <div class="resume-tabs">
+            <button class="resume-tab-btn active" data-tab="education">Education</button>
+            <button class="resume-tab-btn" data-tab="extracurricular">Training</button>
+            <button class="resume-tab-btn" data-tab="certificates">Certificates</button>
+          </div>
+
+          <!-- Education -->
+
+          <!-- resume download button -->
+          <div class="resume-download">
+            <a href="./Goddeti_Shankar_Resume.pdf" download class="btn btn-primary blue">Download Resume</a>
+          </div>
+
+
+          <div class="resume-tab-content active" id="tab-education">
+
+            <div class="edu-card">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-institution">Lovely Professional University</h3>
+                  <p class="edu-location">Phagwara, Punjab</p>
+                </div>
+                <span class="edu-date-badge">Aug 2023 – Present</span>
+              </div>
+              <p class="edu-degree">Bachelor of Technology – Computer Science and Engineering</p>
+              <p class="edu-grade">CGPA: 8.27</p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-institution">Sri Chaitanya Junior College</h3>
+                  <p class="edu-location">Vijayawada, Andhra Pradesh</p>
+                </div>
+                <span class="edu-date-badge">Sep 2021 – Apr 2023</span>
+              </div>
+              <p class="edu-degree">Intermediate – PCM</p>
+              <p class="edu-grade">Percentage: 98.2%</p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-institution">Sri Chaitanya Techno School</h3>
+                  <p class="edu-location">Pulivendula, Andhra Pradesh</p>
+                </div>
+                <span class="edu-date-badge">Jun 2020 – May 2021</span>
+              </div>
+              <p class="edu-degree">Matriculation</p>
+              <p class="edu-grade">Percentage: 99%</p>
+            </div>
+
+          </div>
+
+          <!-- Training -->
+          <div class="resume-tab-content" id="tab-extracurricular">
+
+            <div class="edu-card">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-institution">Data Structures &amp; Algorithms Training</h3>
+                  <p class="edu-location">Cipher Schools</p>
+                </div>
+                <span class="edu-date-badge">Jun – Jul 2025</span>
+              </div>
+              <ul class="edu-points">
+                <li>Covered essential concepts including arrays, linked lists, stacks, queues, trees, graphs, and dynamic programming.</li>
+                <li>Tackled 100+ coding challenges, strengthening analytical reasoning and logical problem-solving.</li>
+                <li>Examined time/space complexity and applied efficient algorithmic strategies.</li>
+                <li>Completed a C++ console-based Library Management System as the capstone project.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Certificates -->
+          <div class="resume-tab-content" id="tab-certificates">
+
+            <a href="https://drive.google.com/file/d/1iMkpvL2gnDfElYKTY-_8Z5BDn3ClQyfD/view?usp=sharing" target="_blank" class="cert-card-link" style="display:block;">
+              <div class="edu-card interactive-card">
+                <div class="edu-header">
+                  <div>
+                    <h3 class="edu-institution">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                    <p class="edu-location">Oracle</p>
+                  </div>
+                  <span class="edu-date-badge">Mar 2026</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1nGr2r4Bd8u6WWjMFJcJC-SX4QuExhKRs/view?usp=sharing" target="_blank" class="cert-card-link" style="display:block;">
+              <div class="edu-card interactive-card">
+                <div class="edu-header">
+                  <div>
+                    <h3 class="edu-institution">Java Programming</h3>
+                    <p class="edu-location">IAM Neo Platform</p>
+                  </div>
+                  <span class="edu-date-badge">May 2025</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/197eCEOrjpNe1sB7OrYnH5dBaVODFm8lW/view?usp=sharing" target="_blank" class="cert-card-link" style="display:block;">
+              <div class="edu-card interactive-card">
+                <div class="edu-header">
+                  <div>
+                    <h3 class="edu-institution">Privacy And Security In Online Social Media</h3>
+                    <p class="edu-location">NPTEL</p>
+                  </div>
+                  <span class="edu-date-badge">Apr 2025</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1nzlX2bCH_T89yyQz6LezMW-zfwAZwLWt/view?usp=sharing" target="_blank" class="cert-card-link" style="display:block;">
+              <div class="edu-card interactive-card">
+                <div class="edu-header">
+                  <div>
+                    <h3 class="edu-institution">Object-Oriented Programming (OOP)</h3>
+                    <p class="edu-location">IAM Neo Platform</p>
+                  </div>
+                  <span class="edu-date-badge">Dec 2024</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1IoOeyPx3Pwwdr8TbJnFAq0cgo-Vcs0eM/view?usp=sharing" target="_blank" class="cert-card-link" style="display:block;">
+              <div class="edu-card interactive-card">
+                <div class="edu-header">
+                  <div>
+                    <h3 class="edu-institution">Responsive Web Design</h3>
+                    <p class="edu-location">Free Code Camp</p>
+                  </div>
+                  <span class="edu-date-badge">Nov 2023</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="resume-download">
+            <a href="./Goddeti_Shankar_Resume.pdf" download class="btn btn-primary blue resume-dl-btn">
+              <ion-icon name="download-outline"></ion-icon> Download Resume
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- #CONTACT -->
+      <section class="section contact" id="contact">
+        <div class="container">
+
+          <div class="contact-card">
+
+            <p class="card-subtitle">Get In Touch</p>
+            <h2 class="h2 section-title" style="text-align:left;">Drop Me a Line</h2>
+            <p class="contact-intro">Have a question or want to work together? Fill out the form or reach out directly.</p>
+
+            <div class="wrapper">
+
+              <form action="" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required class="contact-input">
+                <input type="email" name="email" placeholder="your.email@example.com" required class="contact-input">
+                <textarea name="message" placeholder="Your message..." required class="contact-input"></textarea>
+                <button type="submit" class="btn-submit">Send Message</button>
+              </form>
+
+              <div class="contact-info-panel">
+                <h3 class="contact-info-title">Contact Information</h3>
+
+                <ul class="contact-list">
+                  <li class="contact-item">
+                    <div class="contact-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                    <div>
+                      <h4 class="contact-item-title">Email</h4>
+                      <a href="mailto:shankarnarayanareddy196@gmail.com" class="contact-item-link">shankarnarayanareddy196@gmail.com</a>
+                    </div>
+                  </li>
+                  <li class="contact-item">
+                    <div class="contact-icon"><ion-icon name="call-outline"></ion-icon></div>
+                    <div>
+                      <h4 class="contact-item-title">Phone</h4>
+                      <a href="tel:+916300783770" class="contact-item-link">+91-6300783770</a>
+                    </div>
+                  </li>
+                  <li class="contact-item">
+                    <div class="contact-icon"><ion-icon name="logo-linkedin"></ion-icon></div>
+                    <div>
+                      <h4 class="contact-item-title">LinkedIn</h4>
+                      <a href="https://www.linkedin.com/in/shankar04/" target="_blank" class="contact-item-link">linkedin.com/in/shankar04</a>
+                    </div>
+                  </li>
+                  <li class="contact-item">
+                    <div class="contact-icon"><ion-icon name="logo-github"></ion-icon></div>
+                    <div>
+                      <h4 class="contact-item-title">GitHub</h4>
+                      <a href="https://github.com/Shankar6300" target="_blank" class="contact-item-link">github.com/Shankar6300</a>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="contact-social">
+                  <p class="follow-text">Follow Me</p>
+                  <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shankar04/" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a href="https://github.com/Shankar6300" target="_blank" class="social-icon-btn" aria-label="GitHub">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+  <!-- #FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">
+        &copy; 2026 <a href="#" class="copyright-link">Goddeti Shankar Narayana Reddy</a>. All Rights Reserved.
+      </p>
+      <ul class="footer-list">
+        <li><a href="https://www.linkedin.com/in/shankar04/" target="_blank" class="footer-link">LinkedIn</a></li>
+        <li><a href="https://github.com/Shankar6300" target="_blank" class="footer-link">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" data-back-to-top>BACK TOP</a>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
