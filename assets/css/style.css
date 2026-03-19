@@ -8,43 +8,54 @@
 
 :root {
   /* Dark background palette */
-  --bg-primary:    hsl(222, 47%, 8%);
-  --bg-secondary:  hsl(225, 39%, 12%);
-  --bg-card:       hsla(225, 35%, 16%, 0.7);
-  --bg-card-hover: hsla(225, 32%, 20%, 0.85);
+  --bg-primary:    #0B0E14; /* Deep dark background */
+  
+  /* Interesting Dark Mode Background: Animated Orbs + Subtle Grid */
+  --bg-pattern:    
+    radial-gradient(circle at 15% 50%, hsla(180, 90%, 50%, 0.1), transparent 30%),
+    radial-gradient(circle at 85% 30%, hsla(30, 80%, 60%, 0.08), transparent 30%),
+    radial-gradient(circle at 50% 80%, hsla(262, 72%, 65%, 0.08), transparent 40%),
+    linear-gradient(hsla(220, 30%, 50%, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, hsla(220, 30%, 50%, 0.03) 1px, transparent 1px);
+  --bg-pattern-size: 100vw 100vh, 100vw 100vh, 100vw 100vh, 40px 40px, 40px 40px;
+  --bg-pattern-pos: 0 0, 0 0, 0 0, -1px -1px, -1px -1px;
+  
+  --bg-secondary:  #151A22; /* Elevated dark card bg */
+  --bg-card:       #151A22;
+  --bg-card-hover: #1E252F;
   --bg-overlay:    hsla(222, 47%, 8%, 0.85);
 
-  /* Accent colours - Modern Vibrant Teal & Hot Pink */
-  --accent-purple:  hsl(330, 85%, 55%);  /* hot pink instead */
-  --accent-blue:    hsl(180, 90%, 50%);  /* vibrant teal instead */
-  --accent-cyan:    hsl(180, 100%, 50%); /* bright cyan */
-  --accent-gradient: linear-gradient(135deg, hsl(180,90%,50%), hsl(330,85%,55%)); /* teal to hot pink */
-  --accent-glow-pink: 262, 72%, 65%;
-  --accent-glow-cyan: 180, 90%, 50%;
+  /* Accent colours matching the UI theme vibe but glowing for dark mode */
+  --accent-purple: #E68A5C; /* Glowy Orange/Tan */
+  --accent-cyan:   #38B2CE; /* Glowy Light Teal */
+  --accent-blue:   #1E9EB3; /* Vivid Teal */
+  --accent-gradient: #1E9EB3; /* Flat vivid teal for main buttons */
+  --accent-glow-pink: 25, 75%, 60%;
+  --accent-glow-cyan: 180, 90%, 40%;
 
-  /* Legacy aliases kept for reuse */
-  --space-cadet:   hsl(222, 47%, 8%);
-  --independence:  hsl(225, 35%, 16%);
-  --orange-soda:   hsl(262, 72%, 65%);   /* remapped to purple accent */
-  --midnight-blue: hsl(225, 39%, 12%);
-  --klein-blue:    hsl(218, 82%, 60%);
-  --glaucous:      hsl(230, 52%, 45%);
+  /* Generic Text colors */
+  --white:         #FFFFFF;
+  --black:         #000000;
+  --cadet-blue-crayola: #A0ABC0; /* Muted text */
   --manatee:       hsl(220, 15%, 55%);
-  --white:         hsl(0, 0%, 100%);
-  --black:         hsl(0, 0%, 0%);
-  --cadet-blue-crayola: hsl(220, 15%, 65%);
+  --btn-text:      #FFFFFF;
+
+  /* Structural overrides mapping via variables (Shared) */
+  --radius-btn: 5px;
+  --avatar-radius: 5px 5px 5px 120px; /* Unique shape from image */
+  --avatar-wrap-bg: var(--accent-cyan);
 
   /* Typography */
   --ff-open-sans: 'Open Sans', sans-serif;
   --ff-barlow:    'Barlow', sans-serif;
   --ff-poppins:   'Poppins', sans-serif;
 
-  --fs-1: 3.5rem;
-  --fs-2: 3rem;
-  --fs-3: 2.4rem;
-  --fs-4: 2rem;
-  --fs-5: 1.8rem;
-  --fs-6: 1.3rem;
+  --fs-1: 4.2rem;
+  --fs-2: 3.5rem;
+  --fs-3: 2.8rem;
+  --fs-4: 2.2rem;
+  --fs-5: 2.0rem;
+  --fs-6: 1.5rem;
 
   --fw-600: 600;
   --fw-700: 700;
@@ -72,25 +83,72 @@
 
   /* Border */
   --border-subtle: 1px solid hsla(220,30%,30%,0.4);
+
+  /* Gradients */
+  --hero-bg-gradient-1: hsla(262,72%,20%,0.25);
+  --hero-bg-gradient-2: hsla(218,82%,20%,0.2);
 }
 
 /* Light Theme overrides */
 body.light-theme {
-  --bg-primary:    hsl(0, 0%, 98%);
-  --bg-secondary:  hsl(0, 0%, 95%);
-  --bg-card:       hsla(0, 0%, 100%, 0.7);
-  --bg-card-hover: hsla(0, 0%, 100%, 0.9);
-  --bg-overlay:    hsla(0, 0%, 98%, 0.85);
+  --bg-primary:    #F0F8FF; /* Soft alice blue / cyan tinted white */
+  --bg-pattern:    none;
+  --bg-secondary:  #E0F2FE; /* Light cyan background card */
+  --bg-card:       #FFFFFF; /* White for cards */
+  --bg-card-hover: #F8FAFC;
+  --bg-overlay:    hsla(200, 80%, 95%, 0.9);
 
-  --white:         hsl(222, 47%, 8%); /* Actually dark text */
-  --black:         hsl(0, 0%, 100%); /* Actually light bg */
-  --cadet-blue-crayola: hsl(220, 15%, 35%); /* Darker text for readability */
-  --manatee:       hsl(220, 15%, 45%);
+  /* Typography Colors */
+  --white:         #0F172A; /* Pitch black for headings */
+  --black:         #FFFFFF;
+  --cadet-blue-crayola: #334155; /* Very dark grayish-blue for standard text */
+  --manatee:       #475569;
   
-  --border-subtle: 1px solid hsla(220,10%,80%,0.8);
+  /* Theme Colors matching the Avatar (Teal/Cyan) */
+  --accent-purple: #38B2CE; /* Light Teal */
+  --accent-cyan:   #1E9EB3; /* Vivid Teal */
+  --accent-blue:   #0284C7; /* Ocean Blue */
+  --accent-gradient: linear-gradient(135deg, #1E9EB3, #38B2CE); /* Teal gradient */
   
-  --shadow:      0 4px 24px hsla(222,47%,4%,0.1);
-  --shadow-card: 0 2px 16px hsla(262,72%,20%,0.08);
+  --border-subtle: 1px solid #BAE6FD;
+  
+  --shadow:      0 8px 30px rgba(2, 132, 199, 0.08);
+  --shadow-card: 0 4px 20px rgba(30, 158, 179, 0.05);
+  --shadow-glow: none;
+
+  /* Structural overrides mapping via variables */
+  --radius-btn: 5px;
+  --avatar-radius: 5px 5px 5px 120px;
+  --avatar-wrap-bg: var(--accent-gradient); /* Give avatar its theme back in light mode */
+  --btn-text: #FFFFFF; /* White text creates good contrast on teal buttons */
+  
+  /* Text fixing overrides for light mode */
+  --highlight-text: #1E9EB3; /* Teal */
+  --see-more: #0F172A; /* Slate 900 */
+}
+
+/* Light mode specific element fixes */
+body.light-theme .hero-name, 
+body.light-theme .highlight-name {
+  background: var(--accent-gradient); /* Teal gradient text instead of solid black */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-theme .section-subtitle {
+  color: var(--accent-cyan); /* Teal subtitles */
+}
+
+body.light-theme .btn-primary {
+  background: var(--accent-gradient);
+  color: var(--btn-text);
+}
+
+body.light-theme .btn-primary:hover {
+  background: var(--accent-blue);
+  color: var(--black);
+  transform: translateY(-4px);
 }
 
 
@@ -156,10 +214,25 @@ html {
 
 body {
   background-color: var(--bg-primary);
+  background-image: var(--bg-pattern);
+  background-size: var(--bg-pattern-size);
+  background-position: var(--bg-pattern-pos);
+  background-attachment: fixed;
   color: var(--cadet-blue-crayola);
-  font-size: 1.6rem;
-  line-height: 1.7;
+  font-size: 1.8rem;
+  line-height: 1.8;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle animation overlay for dark mode to make it feel alive */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 60%, var(--bg-primary) 100%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 @keyframes fadeInUp {
@@ -202,20 +275,25 @@ body {
   #REUSED STYLES
 \*-----------------------------------*/
 
-.container { padding-inline: 20px; }
+.container {
+  margin-inline: auto;
+  padding-inline: clamp(14px, 2vw, 30px);
+}
 
 .btn {
-  color: var(--white);
+  color: var(--btn-text, hsl(0, 0%, 100%));
   font-family: var(--ff-barlow);
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
   max-width: max-content;
   padding: var(--padding, 10px 36px);
-  border-radius: 50px;
+  border-radius: var(--radius-btn, 50px);
   transition: var(--transition-smooth);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn::before {
@@ -257,9 +335,14 @@ body {
   transform: translateY(-4px);
 }
 
+.hero-btn-group {
+  display: flex;
+  gap: 15px;
+}
+
 .btn-outline {
-  border: 2px solid var(--accent-purple);
-  color: var(--accent-purple);
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan);
   background: transparent;
   padding: 8px 34px;
   transition: var(--transition-smooth);
@@ -267,7 +350,7 @@ body {
 
 .btn-outline:is(:hover, :focus) {
   background: var(--accent-gradient);
-  color: var(--white);
+  color: hsl(0, 0%, 100%);
   border-color: transparent;
   transform: translateY(-3px);
   box-shadow: 0 8px 24px hsla(var(--accent-glow-pink), 0.4);
@@ -354,7 +437,12 @@ body {
 .h2 { font-size: var(--fs-2); }
 .h3 { font-size: var(--fs-3); }
 
-.section-text  { text-align: center; margin-block-end: 50px; }
+.section-text  {
+  text-align: center;
+  font-size: clamp(1.7rem, 0.45vw + 1.35rem, 2rem);
+  line-height: 1.85;
+  margin-block-end: 50px;
+}
 
 .highlight-name { 
   background: var(--accent-gradient);
@@ -373,9 +461,12 @@ body {
 
 .header {
   position: fixed;
+  top: 12px;
+  width: calc(100% - 24px);
+  left: 12px;
+  border-radius: 20px 20px 0 0;
   padding-block: 15px;
-  width: 100%;
-  background-color: hsl(234, 100%, 07%); /* deep navy similar to screenshot */
+  background-color: var(--bg-secondary);
   height: 65px;
   box-shadow: 0 1px 0 var(--border-subtle);
   overflow: hidden;
@@ -439,13 +530,13 @@ body {
 }
 
 .navbar-link:is(:hover, :focus) {
-  color: var(--white);
+  color: hsl(0, 0%, 100%);
   background: var(--accent-gradient);
   transform: translateY(-2px);
 }
 
 .navbar-link.active {
-  color: var(--white);
+  color: hsl(0, 0%, 100%);
   background: var(--accent-gradient);
 }
 
@@ -457,7 +548,10 @@ body {
 .navbar .btn {
   background: var(--accent-gradient);
   margin-block-start: 15px;
-  padding: 6px 22px;
+  padding: 8px 24px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px hsla(var(--accent-glow-pink), 0.2);
 }
 
 
@@ -466,14 +560,24 @@ body {
 \*-----------------------------------*/
 
 .hero {
-  background: radial-gradient(ellipse at 70% 40%, hsla(262,72%,20%,0.25) 0%, transparent 60%),
-              radial-gradient(ellipse at 20% 80%, hsla(218,82%,20%,0.2) 0%, transparent 60%),
-              var(--bg-primary);
+  background: radial-gradient(ellipse at 70% 40%, hsla(180, 90%, 50%, 0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, hsla(30, 80%, 60%, 0.1) 0%, transparent 60%),
+              var(--bg-secondary);
+  margin: 12px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  min-height: calc(100vh - 24px);
   padding-block: 100px var(--section-padding);
-  min-height: 100vh;
   display: flex;
   align-items: center;
 }
+
+body.light-theme .hero {
+  background: var(--bg-secondary);
+  /* Inherits structural margin & bg from .hero but uses light theme's variables */
+}
+
+/* Base header styles already handle dark mode structure now */
 
 .hero > .container {
   display: grid;
@@ -488,6 +592,23 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.hero-welcome {
+  color: var(--accent-cyan);
+  font-family: var(--ff-barlow);
+  font-size: 1.8rem;
+  margin-block-end: 5px;
+}
+
+.highlight-role {
+  color: var(--accent-purple);
+}
+
+.see-more {
+  color: var(--accent-blue);
+  display: inline;
+  font-weight: var(--fw-600);
 }
 
 .hero-title {
@@ -520,7 +641,7 @@ body {
 
 .hero-role {
   display: block;
-  font-size: 1.6rem;
+  font-size: clamp(1.8rem, 0.55vw + 1.35rem, 2.2rem);
   color: var(--cadet-blue-crayola);
   font-family: var(--ff-barlow);
   font-weight: var(--fw-600);
@@ -529,10 +650,10 @@ body {
 }
 
 .hero-text {
-  font-size: 1.5rem;
-  line-height: 1.7;
+  font-size: clamp(1.7rem, 0.45vw + 1.35rem, 2rem);
+  line-height: 1.8;
   color: var(--cadet-blue-crayola);
-  max-width: 50ch;
+  max-width: 54ch;
   margin-block-end: 20px;
   margin-block-start: 0;
 }
@@ -556,11 +677,13 @@ body {
 .hero-avatar-wrapper {
   width: 280px;
   height: 280px;
-  border-radius: 50%;
-  background: var(--accent-gradient);
+  border-radius: var(--avatar-radius, 50%);
+  background: var(--avatar-wrap-bg, var(--accent-gradient));
   padding: 3px;
-  box-shadow: 0 8px 32px hsla(var(--accent-glow-pink), 0.4);
+  /* hide glow in light mode via variable */
+  box-shadow: var(--shadow-glow, 0 8px 32px hsla(var(--accent-glow-pink), 0.4));
   position: relative;
+  overflow: hidden; /* Added to keep shape intact */
   animation: floatAvatar 4s ease-in-out infinite;
 }
 
@@ -568,7 +691,7 @@ body {
   content: "";
   position: absolute;
   inset: -4px;
-  border-radius: 50%;
+  border-radius: var(--avatar-radius, 50%);
   background: var(--accent-gradient);
   opacity: 0.3;
   filter: blur(20px);
@@ -592,7 +715,7 @@ body {
 .hero-avatar {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: var(--avatar-radius, 50%);
   object-fit: cover;
   border: 3px solid var(--bg-primary);
   /* remove rotation so image displays correctly */
@@ -1010,6 +1133,47 @@ body {
   font-weight: var(--fw-600);
 }
 
+.skills-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.2;
+}
+
+.skills-symbol-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.skills-symbol {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: var(--border-subtle);
+  background: var(--bg-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.skills-symbol img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.skills-symbol ion-icon {
+  font-size: 1.5rem;
+  color: var(--accent-cyan);
+}
+
+body.light-theme .skills-symbol {
+  background: #EAF4FF;
+  border: 1px solid #D7E9F8;
+}
+
 .skills-progress-box {
   background-color: var(--bg-secondary);
   height: 8px;
@@ -1135,10 +1299,15 @@ body {
   border: var(--border-subtle);
   border-radius: var(--radius-15);
   overflow: hidden;
-  transition: var(--transition-smooth);
+  transition:
+    transform var(--transition-smooth),
+    opacity 0.35s ease,
+    box-shadow var(--transition-smooth),
+    border-color var(--transition-smooth);
   box-shadow: var(--shadow-card);
   position: relative;
   backdrop-filter: blur(10px);
+  opacity: 1;
 }
 
 .project-card::before {
@@ -1163,6 +1332,17 @@ body {
 
 .project-card:is(:hover, :focus-within)::before {
   opacity: 0.15;
+}
+
+.project-card.project-filter-out {
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  pointer-events: none;
+}
+
+.project-card.project-filter-in {
+  animation: projectFilterIn 0.5s var(--cubic-out) both;
+  animation-delay: var(--project-stagger, 0ms);
 }
 
 .project-card.hidden { display: none; }
@@ -1307,6 +1487,12 @@ body {
   font-size: 2.4rem;
 }
 
+.cert-icon-wrap img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .cert-title {
   color: var(--white);
   font-family: var(--ff-barlow);
@@ -1361,6 +1547,18 @@ body {
   background: var(--bg-card-hover);
 }
 
+body.light-theme .achievement-item:is(:hover, :focus-within) {
+  border-color: hsla(193, 72%, 45%, 0.45);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.16);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F3FAFF 100%);
+}
+
+body.light-theme .achievement-item:is(:hover, :focus-within) .achievement-icon {
+  transform: scale(1.06);
+  box-shadow: 0 8px 22px rgba(30, 158, 179, 0.28);
+}
+
 .achievement-icon {
   display: flex;
   align-items: center;
@@ -1374,6 +1572,21 @@ body {
   align-self: flex-start;
   box-shadow: 0 4px 16px hsla(var(--accent-glow-pink), 0.4);
   transition: var(--transition-smooth);
+}
+
+.achievement-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.achievement-icon-brand {
+  background: #ffffff;
+  border: 1px solid rgba(17, 34, 51, 0.12);
+}
+
+body.light-theme .achievement-icon-brand {
+  border: 1px solid rgba(17, 34, 51, 0.1);
 }
 
 .achievement-header {
@@ -1680,20 +1893,40 @@ textarea.contact-input {
 
 .btn-submit {
   background: var(--accent-gradient);
-  color: var(--white);
+  color: hsl(0, 0%, 100%);
   font-family: var(--ff-barlow);
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
   width: 100%;
   padding: 12px;
   border-radius: var(--radius-10);
-  transition: var(--transition-2);
+  transition: var(--transition-smooth);
 }
 
 .btn-submit:is(:hover, :focus) {
   opacity: 0.85;
   box-shadow: 0 4px 20px hsla(262,72%,50%,0.4);
 }
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-status {
+  min-height: 22px;
+  margin-top: 8px;
+  font-size: 1.4rem;
+  font-weight: var(--fw-600);
+}
+
+.form-status.pending { color: var(--accent-cyan); }
+.form-status.success { color: #22c55e; }
+.form-status.error { color: #ef4444; }
+
+body.light-theme .form-status.success { color: #15803d; }
+body.light-theme .form-status.error { color: #dc2626; }
+
 .contact-info-title {
   color: var(--white);
   font-family: var(--ff-barlow);
@@ -1972,6 +2205,17 @@ textarea.contact-input {
   }
 }
 
+@keyframes projectFilterIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -2094,6 +2338,7 @@ textarea.contact-input {
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.3s; }
 .project-card:nth-child(3) { animation-delay: 0.5s; }
+.project-card:nth-child(4) { animation-delay: 0.7s; }
 
 .cert-card {
   animation: slideInLeft 0.6s ease-out;
@@ -2223,13 +2468,15 @@ a, button, .btn, .skills-item, .project-card, .cert-card, .achievement-item, .ed
 @media (min-width: 992px) {
 
   :root {
-    --fs-1: 5.5rem;
-    --fs-2: 3.8rem;
+    --fs-1: 5.8rem;
+    --fs-2: 4.2rem;
+    --fs-3: 3.2rem;
+    --fs-4: 2.6rem;
     --section-padding: 90px;
   }
 
   .container {
-    max-width: 1100px;
+    max-width: 1520px;
     margin-inline: auto;
   }
 
@@ -2238,16 +2485,19 @@ a, button, .btn, .skills-item, .project-card, .cert-card, .achievement-item, .ed
 
   .header,
   .header.nav-active {
-    background-color: var(--bg-primary); /* keep header dark at all times like reference */
+    background-color: var(--bg-primary);
     box-shadow: none;
     height: unset;
     padding-block: 24px;
+    transition: var(--transition-2);
   }
 
   .header.active {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: var(--border-subtle);
-    box-shadow: 0 4px 24px hsla(222,47%,4%,0.5);
+    box-shadow: 0 4px 24px hsla(222,47%,4%,0.1);
     padding-block: 16px;
   }
 
@@ -2261,7 +2511,9 @@ a, button, .btn, .skills-item, .project-card, .cert-card, .achievement-item, .ed
 
   .navbar .btn {
     margin-block-start: 0;
-    --padding: 7px 26px;
+    padding: 8px 24px;
+    font-size: 1.5rem;
+    border-radius: 30px;
   }
 
   /* HERO */
@@ -2380,6 +2632,10 @@ a, button, .btn, .skills-item, .project-card, .cert-card, .achievement-item, .ed
 }
 
 @media (min-width: 1200px) {
+
+  .container {
+    max-width: 1680px;
+  }
 
   .cert-grid {
     grid-template-columns: repeat(3, 1fr);

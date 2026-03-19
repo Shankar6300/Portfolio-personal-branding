@@ -132,12 +132,26 @@ filterBtns.forEach(function (btn) {
     this.classList.add("active");
 
     const filter = this.getAttribute("data-filter");
+    let visibleIndex = 0;
 
     projectCards.forEach(function (card) {
-      if (filter === "all" || card.getAttribute("data-category") === filter) {
-        card.classList.remove("hidden");
+      const shouldShow = filter === "all" || card.getAttribute("data-category") === filter;
+
+      if (shouldShow) {
+        card.classList.remove("hidden", "project-filter-out");
+        card.style.setProperty("--project-stagger", `${visibleIndex * 70}ms`);
+        card.classList.remove("project-filter-in");
+        void card.offsetWidth;
+        card.classList.add("project-filter-in");
+        visibleIndex += 1;
       } else {
-        card.classList.add("hidden");
+        card.classList.remove("project-filter-in");
+        card.classList.add("project-filter-out");
+        window.setTimeout(function () {
+          if (card.classList.contains("project-filter-out")) {
+            card.classList.add("hidden");
+          }
+        }, 280);
       }
     });
   });
@@ -223,6 +237,59 @@ const skillObserver = new IntersectionObserver((entries, observer) => {
 const skillsSection = document.getElementById("skills");
 if (skillsSection) {
   skillObserver.observe(skillsSection);
+}
+
+/**
+ * Contact form submission (sends email via FormSubmit)
+ */
+const contactForm = document.querySelector("[data-contact-form]");
+if (contactForm) {
+  const formStatus = contactForm.querySelector("[data-form-status]");
+  const submitBtn = contactForm.querySelector(".btn-submit");
+  const defaultBtnText = submitBtn ? submitBtn.textContent : "Send Message";
+
+  contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    if (formStatus) {
+      formStatus.textContent = "Sending your message...";
+      formStatus.className = "form-status pending";
+    }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      if (formStatus) {
+        formStatus.textContent = "Message sent successfully. I will get back to you soon.";
+        formStatus.className = "form-status success";
+      }
+
+      contactForm.reset();
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = "Unable to send right now. Please use the email link beside the form.";
+        formStatus.className = "form-status error";
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = defaultBtnText;
+      }
+    }
+  });
 }
 
 /**
