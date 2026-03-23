@@ -951,6 +951,7 @@ body.light-theme .hero {
 }
 
 .experience-card {
+  display: block;
   background: var(--bg-card);
   border: var(--border-subtle);
   border-radius: var(--radius-15);
